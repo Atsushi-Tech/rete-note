@@ -1,0 +1,90 @@
+name: Draft daily post
+
+on:
+  # 毎晩21:10（日本時間）に翌日分の記事を生成し、プルリクエストを作る
+  schedule:
+    - cron: "10 12 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "公開日（YYYY-MM-DD）。空欄なら翌日"
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+
+      # 確認待ちのプルリクエスト（draft/* ブランチ）の記事を把握し、同じテーマや日付を避ける
+      - name: Collect pending drafts
+        run: |
+          git fetch origin '+refs/heads/draft/*:refs/remotes/origin/draft/*' || true
+          PENDING=$(for b in $(git branch -r --list 'origin/draft/*'); do
+            git diff --name-only --diff-filter=A "origin/${{ github.event.repository.default_branch }}...$b" -- posts/
+          done | xargs -r -n1 basename | sort -u | paste -sd, -)
+          echo "PENDING_POSTS=$PENDING" >> "$GITHUB_ENV"
+          echo "確認待ち: ${PENDING:-なし}"
+
+      - name: Generate post
+        id: gen
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+        run: |
+          if [ -n "${{ inputs.date }}" ]; then
+            node scripts/generate-post.mjs --date "${{ inputs.date }}"
+          else
+            node scripts/generate-post.mjs
+          fi
+
+      - name: Check build
+        if: steps.gen.outputs.created == 'true'
+        run: npm run build:future
+
+      # 変数 AUTO_PUBLISH を true にすると、確認なしで main に直接追加する
+      - name: Commit directly
+        if: steps.gen.outputs.created == 'true' && vars.AUTO_PUBLISH == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${{ steps.gen.outputs.file }}"
+          git commit -m "記事追加: ${{ steps.gen.outputs.title }}"
+          git push
+
+      - name: Open pull request
+        if: steps.gen.outputs.created == 'true' && vars.AUTO_PUBLISH != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="draft/${{ steps.gen.outputs.date }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add "${{ steps.gen.outputs.file }}"
+          git commit -m "下書き: ${{ steps.gen.outputs.title }}"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --title "【${{ steps.gen.outputs.date }} 公開予定】${{ steps.gen.outputs.title }}" \
+            --body "$(cat <<'EOF'
+          自動生成された記事の下書きです。
+
+          確認すること:
+          - [ ] 基準・法令の名称や年、数字が正しい
+          - [ ] 存在しない事例や統計が書かれていない
+          - [ ] 自分の経験や意見を1〜2文加えた（オリジナリティのため）
+
+          問題なければマージしてください。公開日の朝6:05に自動で公開されます。
+          公開したくない場合は、このプルリクエストを閉じてください。
+          EOF
+          )"
