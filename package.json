@@ -1,0 +1,20 @@
+{
+  "name": "rete-note",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "レ点ノート — 内部監査と情報セキュリティのブログ",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:future": "node build.mjs --future",
+    "new": "node scripts/new-post.mjs",
+    "draft": "node scripts/generate-post.mjs",
+    "preview": "node build.mjs --future && npx --yes serve dist"
+  },
+  "dependencies": {
+    "marked": "^18.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
