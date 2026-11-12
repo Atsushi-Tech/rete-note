@@ -89,13 +89,13 @@ export function wrap(text, width) {
   return out;
 }
 
-function body(id, x, base) {
+function body(id, x, base, heldProp) {
   const y = base;
   switch (id) {
     case 'reten':
       return `<path d="M${x - 25} ${y} Q${x - 27} ${y - 50} ${x} ${y - 54} Q${x + 27} ${y - 50} ${x + 25} ${y} Z" fill="#1d2a36"/>
 <path d="M${x - 7} ${y - 54} L${x} ${y - 38} L${x + 7} ${y - 54} Z" fill="#fbfcfa"/>
-<path d="M${x + 12} ${y - 44} L${x + 14} ${y - 26}" stroke="#c3352b" stroke-width="3" stroke-linecap="round"/>`;
+${heldProp === 'red_tick' ? '' : `<path d="M${x + 12} ${y - 44} L${x + 14} ${y - 26}" stroke="#c3352b" stroke-width="3" stroke-linecap="round"/>`}`; // 赤ペンを手に持つときは胸ポケットから消す
     case 'moriya':
       return `<path d="M${x - 25} ${y} Q${x - 27} ${y - 50} ${x} ${y - 54} Q${x + 27} ${y - 50} ${x + 25} ${y} Z" fill="#2f7f7a"/>
 <path d="M${x - 9} ${y - 54} Q${x} ${y - 44} ${x + 9} ${y - 54}" fill="#fbfcfa"/>
@@ -257,7 +257,7 @@ export function renderComic(c) {
     for (const ch of p.characters) {
       const x = two ? (ch.position === 'left' ? 100 : 300) : (ch.position === 'left' ? 140 : 260);
       const dir = ch.position === 'left' ? 1 : -1;
-      g += body(ch.id, x, base) + head(ch.id, x, hy) + face(ch.id, ch.expression, x, hy) + prop(ch.prop, x, base, dir);
+      g += body(ch.id, x, base, ch.prop) + head(ch.id, x, hy) + face(ch.id, ch.expression, x, hy) + prop(ch.prop, x, base, dir);
     }
     // 2人とも話すときは、先に話す人（characters の先頭）のふきだしを上にずらして読む順を示す
     let order = 0;
