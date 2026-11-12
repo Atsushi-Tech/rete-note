@@ -30,6 +30,17 @@
     "topic": "生成AIの社内利用ルールを監査する：利用規程、承認済みツール、入力してはいけない情報"
   },
   {
+    "slug": "incident-nenkin-2015",
+    "category": "情報セキュリティ",
+    "type": "incident",
+    "topic": "日本年金機構の不正アクセス（2015年）：標的型メールから約125万件の流出に至った経緯と、組織・業務改革を内部監査の視点で読む",
+    "sources": [
+      "https://www.mhlw.go.jp/kinkyu/dl/houdouhappyou_150821-02.pdf",
+      "https://www.nisc.go.jp/active/kihon/pdf/incident_report.pdf"
+    ],
+    "search_hint": "日本年金機構 不正アクセス 検証報告書 調査結果報告"
+  },
+  {
     "slug": "backup-restore-test",
     "category": "情報セキュリティ",
     "topic": "バックアップは取得より復元：ランサムウェアを前提にしたバックアップ監査"
@@ -48,6 +59,14 @@
     "slug": "audit-sampling-basics",
     "category": "内部監査",
     "topic": "内部監査のサンプリング入門：統制の実施頻度とサンプル数の目安"
+  },
+  {
+    "slug": "incident-handa-hospital-2021",
+    "category": "情報セキュリティ",
+    "type": "incident",
+    "topic": "つるぎ町立半田病院のランサムウェア被害（2021年）：VPN機器の脆弱性と復旧までの経緯を、内部監査の視点で読む",
+    "sources": [],
+    "search_hint": "つるぎ町立半田病院 コンピュータウイルス感染事案 有識者会議 調査報告書"
   },
   {
     "slug": "cloud-shared-responsibility",
@@ -70,6 +89,14 @@
     "topic": "監査インタビューの技術：質問の順番と記録の残し方"
   },
   {
+    "slug": "incident-osaka-medical-2022",
+    "category": "情報セキュリティ",
+    "type": "incident",
+    "topic": "大阪急性期・総合医療センターのランサムウェア被害（2022年）：委託先経由の侵入と権限管理の問題を、内部監査の視点で読む",
+    "sources": [],
+    "search_hint": "大阪急性期・総合医療センター 情報セキュリティインシデント調査委員会 報告書"
+  },
+  {
     "slug": "ai-full-population-testing",
     "category": "AIと監査",
     "topic": "AIとデータ分析で全件チェック：経費精算や仕訳のテストへの活用と注意点"
@@ -88,6 +115,16 @@
     "slug": "ai-output-review-controls",
     "category": "AIと監査",
     "topic": "AIの出力を人が確認する統制：レビューが形だけになっていないかを監査する"
+  },
+  {
+    "slug": "incident-nagoya-port-2023",
+    "category": "情報セキュリティ",
+    "type": "incident",
+    "topic": "名古屋港コンテナターミナルのシステム停止（2023年）：保守用VPNからの感染とBCPの課題を、内部監査の視点で読む",
+    "sources": [
+      "https://www.mlit.go.jp/kowan/content/001633393.pdf"
+    ],
+    "search_hint": "コンテナターミナルにおける情報セキュリティ対策等検討委員会 中間取りまとめ 名古屋港"
   },
   {
     "slug": "follow-up-audit",
@@ -110,6 +147,14 @@
     "topic": "ジョブ運用・障害対応の統制テスト：異常終了の検知から再実行までの証跡"
   },
   {
+    "slug": "incident-procx-insider-2023",
+    "category": "情報セキュリティ",
+    "type": "incident",
+    "topic": "コールセンター業務の委託先での顧客情報の不正持ち出し（2023年公表）：管理者アカウントの悪用と長期間の見逃しを、内部監査の視点で読む",
+    "sources": [],
+    "search_hint": "NTTマーケティングアクトProCX 元派遣社員 不正流出 調査 再発防止策"
+  },
+  {
     "slug": "audit-committee-reporting",
     "category": "内部監査",
     "topic": "監査委員会・取締役会への報告：経営層が読みたい監査報告の構成"
@@ -130,6 +175,16 @@
     "topic": "IPE（システムから出力された情報）の信頼性検証：網羅性と正確性の確かめ方"
   },
   {
+    "slug": "incident-kadokawa-2024",
+    "category": "情報セキュリティ",
+    "type": "incident",
+    "topic": "KADOKAWAグループへのランサムウェア攻撃（2024年）：従業員アカウントの窃取から事業停止に至った経緯を、内部監査の視点で読む",
+    "sources": [
+      "https://www.kadokawa.co.jp/topics/12088/"
+    ],
+    "search_hint": "KADOKAWA ドワンゴ ランサムウェア 情報漏洩 調査結果 原因と対策"
+  },
+  {
     "slug": "ai-document-review",
     "category": "AIと監査",
     "topic": "生成AIで規程・契約書のレビューを効率化する：監査手続への組み込み方と品質の確保"
@@ -148,6 +203,14 @@
     "slug": "ai-vendor-risk",
     "category": "AIと監査",
     "topic": "生成AIサービスの委託先管理：入力データの取扱い、学習への利用、保存期間の確認"
+  },
+  {
+    "slug": "incident-okayama-psychiatric-2024",
+    "category": "情報セキュリティ",
+    "type": "incident",
+    "topic": "岡山県精神科医療センターのランサムウェア被害（2024年）：未修正の脆弱性とバックアップの破壊を、内部監査の視点で読む",
+    "sources": [],
+    "search_hint": "岡山県精神科医療センター ランサムウェア 調査報告書"
   },
   {
     "slug": "it-application-controls",

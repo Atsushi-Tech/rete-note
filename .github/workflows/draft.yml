@@ -8,6 +8,9 @@ on:
       date:
         description: "公開日（YYYY-MM-DD）。空欄なら翌日"
         required: false
+      topic:
+        description: "テーマのslug（automation/topics.json）。空欄なら一覧の順番どおり"
+        required: false
 
 permissions:
   contents: write
@@ -40,6 +43,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          TOPIC_SLUG: ${{ inputs.topic }}
         run: |
           if [ -n "${{ inputs.date }}" ]; then
             node scripts/generate-post.mjs --date "${{ inputs.date }}"
