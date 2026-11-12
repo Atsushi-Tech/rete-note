@@ -163,7 +163,10 @@ try {
 }
 let parsed;
 try { parsed = parseFrontMatter(raw, '生成結果'); } catch (e) { fail(`生成結果の形式が正しくありません: ${e.message}`); }
-const { data, body } = parsed;
+const { data } = parsed;
+// 本文中の <!-- 編集メモ --> は公開ページのソースに残るので、本文から外してプルリクエストに載せる
+const notes = [];
+const body = parsed.body.replace(/<!--([\s\S]*?)-->\s*/g, (_, c) => { notes.push(c.trim()); return ''; });
 
 // ---------- 検証 ----------
 if (!data.title) fail('タイトルがありません');
@@ -209,7 +212,7 @@ ${isIncident ? `- [ ] 【実際の事案】「参考資料」のリンクを開�
 問題なければマージしてください。公開日の朝6:20に自動で公開されます。
 公開したくない場合は、このプルリクエストを閉じてください。
 
-## 4コマ「${comic ? comic.title : 'なし'}」
+${notes.length ? `## Claudeからの執筆メモ\n${notes.map((n) => `> ${n.replace(/\n/g, '\n> ')}`).join('\n\n')}\n\n` : ''}## 4コマ「${comic ? comic.title : 'なし'}」
 ${comic ? comicTranscript(comic) : comicNote}
 ${comic ? `\n台詞を直すときは \`posts/${comicFile}\` の says を編集してください（\\n は改行）。` : ''}
 `;
