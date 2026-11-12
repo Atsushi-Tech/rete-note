@@ -74,7 +74,7 @@ description: 検索結果に出る120字程度の要約
 
 | ファイル | 内容 |
 | --- | --- |
-| `automation/topics.json` | 記事テーマの一覧（30本分）。上から順に使われる。使い切ると Claude が新しいテーマを選ぶ |
+| `automation/topics.json` | 記事テーマの一覧（41本分。うち11本は「AIと監査」）。上から順に使われる。使い切ると Claude が新しいテーマを選ぶ |
 | `automation/style.md` | 執筆ルール（読者、文字数、正確さ、文体） |
 
 ### オプション（Settings → Secrets and variables → Actions → Variables）

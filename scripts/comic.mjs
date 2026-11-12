@@ -16,7 +16,7 @@ export const CAST = {
   bucho: { name: '部長', role: '業務部門の部長', female: false },
 };
 export const EXPRESSIONS = ['normal', 'smile', 'happy', 'surprised', 'worried', 'sweat', 'serious', 'thinking', 'shocked'];
-export const PROPS = ['chart_up', 'chart_down', 'document', 'laptop', 'memo', 'mail', 'phone', 'key', 'lock', 'red_tick'];
+export const PROPS = ['chart_up', 'chart_down', 'document', 'laptop', 'memo', 'mail', 'phone', 'key', 'lock', 'ai_chat', 'red_tick'];
 export const MAX_SAYS = 36; // 1つのふきだしの最大文字数
 const LINE_WIDE = 13;   // 1人だけ話すコマの1行の文字数
 const LINE_NARROW = 10; // 2人とも話すコマの1行の文字数
@@ -207,6 +207,11 @@ function prop(name, x, base, dir) {
       return `<circle cx="${px + 14}" cy="${py + 20}" r="10" fill="none" stroke="#c49a2c" stroke-width="5"/><path d="M${px + 24} ${py + 20} H${px + 54} M${px + 46} ${py + 20} V${py + 30} M${px + 38} ${py + 20} V${py + 28}" stroke="#c49a2c" stroke-width="5" stroke-linecap="round"/>` + arm;
     case 'lock':
       return `<path d="M${px + 16} ${py + 22} V${py + 12} Q${px + 28} ${py - 4} ${px + 40} ${py + 12} V${py + 22}" fill="none" stroke="#7d8890" stroke-width="5"/><rect x="${px + 8}" y="${py + 22}" width="40" height="30" rx="4" fill="#c49a2c"/><circle cx="${px + 28}" cy="${py + 35}" r="4" fill="${INK}"/>` + arm;
+    case 'ai_chat': // AIとやりとりしているノートPC（ふきだし2つと、きらめき）
+      return `<rect x="${px}" y="${py + 2}" width="58" height="42" rx="3" fill="#2b3a4a"/><rect x="${px + 4}" y="${py + 6}" width="50" height="34" fill="#eef4f1"/>
+<rect x="${px + 8}" y="${py + 10}" width="26" height="9" rx="4" fill="#9fb5a6"/><rect x="${px + 20}" y="${py + 24}" width="30" height="11" rx="4" fill="#6b8fd6"/>
+<path d="M${px + 50} ${py - 12} L${px + 53} ${py - 5} L${px + 60} ${py - 2} L${px + 53} ${py + 1} L${px + 50} ${py + 8} L${px + 47} ${py + 1} L${px + 40} ${py - 2} L${px + 47} ${py - 5} Z" fill="#e0a43a"/>
+<path d="M${px - 6} ${py + 44} H${px + 64} L${px + 58} ${py + 52} H${px} Z" fill="#9aa5ad"/>` + arm;
     case 'red_tick': {
       const tx = dir > 0 ? x - 78 : x + 38; // 外側の下の方に大きなレ点
       const ty = base - 98;

@@ -14,8 +14,25 @@
   },
   "googleAnalyticsId": "",
   "categories": [
-    { "name": "内部監査", "slug": "audit", "code": "IA" },
-    { "name": "IT統制", "slug": "itgc", "code": "IT" },
-    { "name": "情報セキュリティ", "slug": "security", "code": "IS" }
+    {
+      "name": "内部監査",
+      "slug": "audit",
+      "code": "IA"
+    },
+    {
+      "name": "IT統制",
+      "slug": "itgc",
+      "code": "IT"
+    },
+    {
+      "name": "情報セキュリティ",
+      "slug": "security",
+      "code": "IS"
+    },
+    {
+      "name": "AIと監査",
+      "slug": "ai",
+      "code": "AI"
+    }
   ]
 }
