@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { marked } from 'marked';
 import { parseFrontMatter } from './scripts/frontmatter.mjs';
+import { renderComic } from './scripts/comic.mjs';
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const DIST = path.join(ROOT, 'dist');
@@ -49,12 +50,22 @@ let posts = fs.readdirSync(postsDir).filter((f) => f.endsWith('.md')).map((f) =>
   const date = new Date(`${data.date}T00:00:00+09:00`);
   if (Number.isNaN(date.getTime())) throw new Error(`${f}: date は YYYY-MM-DD 形式で書いてください`);
   const html = marked.parse(body);
+  // 同じ名前の .comic.json があれば4コマ漫画を描く
+  const comicFile = path.join(postsDir, f.replace(/\.md$/, '.comic.json'));
+  let comic = null;
+  if (fs.existsSync(comicFile)) {
+    try {
+      const script = JSON.parse(fs.readFileSync(comicFile, 'utf8'));
+      comic = { svg: renderComic(script), title: script.title };
+    }
+    catch (e) { throw new Error(`${path.basename(comicFile)}: ${e.message}`); }
+  }
   const text = html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
   return {
     slug: f.replace(/\.md$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, ''),
     title: data.title,
     description: data.description || text.slice(0, 110) + '…',
-    date, category, html,
+    date, category, html, comic,
     tags: data.tags || [],
     draft: data.draft === true,
     readMinutes: Math.max(1, Math.round(text.length / 500)),
@@ -181,6 +192,14 @@ function adUnit() {
 <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></aside>`;
 }
 
+// 4コマ漫画を導入文のあと（最初の見出しの直前）に置く
+function withComic(html, comic) {
+  if (!comic) return html;
+  const fig = `<figure class="comic">${comic.svg}<figcaption>4コマ「${esc(comic.title)}」</figcaption></figure>\n`;
+  const i = html.indexOf('<h2');
+  return i >= 0 ? html.slice(0, i) + fig + html.slice(i) : html + fig;
+}
+
 // 本文の2つ目の見出しの直前に広告を1つ差し込む
 function withInArticleAd(html) {
   const ad = adUnit();
@@ -266,7 +285,7 @@ posts.forEach((p, idx) => {
     <p class="article-meta"><time datetime="${isoDate(p.date)}">${fmtDate(p.date)}</time><span>約${p.readMinutes}分で読めます</span></p>
   </header>
   <div class="prose">
-${withInArticleAd(p.html)}
+${withInArticleAd(withComic(p.html, p.comic))}
   </div>
   ${p.tags.length ? `<ul class="tags" aria-label="タグ">${p.tags.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
   ${adUnit()}

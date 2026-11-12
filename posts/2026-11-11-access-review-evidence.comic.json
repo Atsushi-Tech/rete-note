@@ -1,0 +1,77 @@
+{
+  "title": "全件承認の落とし穴",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "normal",
+          "prop": null,
+          "says": ""
+        },
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "smile",
+          "prop": "document",
+          "says": "権限レビュー、\n全件承認しておいたよ"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": null,
+          "says": "この一覧、退職した方も\n入っていますね"
+        },
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "surprised",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "sweat",
+          "prop": null,
+          "says": ""
+        },
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "shocked",
+          "prop": null,
+          "says": "えっ、見ないで\nハンコ押してた…"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "red_tick",
+          "says": "確認した内容まで\n残すのがレビューです"
+        },
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "serious",
+          "prop": "memo",
+          "says": ""
+        }
+      ]
+    }
+  ]
+}

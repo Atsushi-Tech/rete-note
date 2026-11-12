@@ -1,0 +1,77 @@
+{
+  "title": "伝わる指摘",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": null,
+          "says": ""
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": "document",
+          "says": "指摘の報告書、\n書けました！"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": "document",
+          "says": "「管理が不十分」だけだと、\n何を直すか分からないかも"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "surprised",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "smile",
+          "prop": null,
+          "says": "事実・基準・原因・影響、\nそれから改善案！"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "thinking",
+          "prop": "memo",
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": null,
+          "says": "5つそろうと\n伝わるんですね"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "happy",
+          "prop": "red_tick",
+          "says": "そのとおり！"
+        }
+      ]
+    }
+  ]
+}

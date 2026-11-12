@@ -1,0 +1,77 @@
+{
+  "title": "「防衛」が消えた理由",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": null,
+          "says": ""
+        },
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "serious",
+          "prop": null,
+          "says": "内部監査は\n会社を守る最後の砦だ！"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "normal",
+          "prop": null,
+          "says": "3ラインモデルでは\n「防衛」の言葉が\n消えたんです"
+        },
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "surprised",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "smile",
+          "prop": null,
+          "says": "守るだけじゃなく、\n目標達成を一緒に\n支える役割なんです"
+        },
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "thinking",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "happy",
+          "prop": null,
+          "says": "監査は\n頼れる相棒か！"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "happy",
+          "prop": "red_tick",
+          "says": "独立性は\n保ちますけどね"
+        }
+      ]
+    }
+  ]
+}

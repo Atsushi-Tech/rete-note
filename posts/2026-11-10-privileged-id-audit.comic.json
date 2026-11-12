@@ -1,0 +1,77 @@
+{
+  "title": "みんなのroot",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "surprised",
+          "prop": null,
+          "says": ""
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "smile",
+          "prop": "key",
+          "says": "rootのパスワードは\nみんなで共有してます"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "serious",
+          "prop": null,
+          "says": "それだと、誰が操作したか\n分からないよね"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "worried",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": "document",
+          "says": "ログは取ってるけど、\n誰か見てる？"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "sweat",
+          "prop": null,
+          "says": "……"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "happy",
+          "prop": "lock",
+          "says": "貸し出し制にして、\n点検も記録しよう"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "smile",
+          "prop": "memo",
+          "says": "了解です！"
+        }
+      ]
+    }
+  ]
+}

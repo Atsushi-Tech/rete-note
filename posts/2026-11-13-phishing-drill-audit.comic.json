@@ -1,0 +1,77 @@
+{
+  "title": "開封率より報告数",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": null,
+          "says": ""
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": "chart_down",
+          "says": "訓練メールの開封率、\n去年より下がりました！"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "normal",
+          "prop": null,
+          "says": "報告してくれた人は\n何人？"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "surprised",
+          "prop": null,
+          "says": "えっ、報告？"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "worried",
+          "prop": "mail",
+          "says": "報告窓口のメール、実は誰も見ていなくて…"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "sweat",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "happy",
+          "prop": "red_tick",
+          "says": "開いた人より、報告した人を数えよう。"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "serious",
+          "prop": "memo",
+          "says": "メモします！"
+        }
+      ]
+    }
+  ]
+}
