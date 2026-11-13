@@ -14,6 +14,7 @@ export const CAST = {
   moriya: { name: '守屋さん', role: '情報セキュリティ担当', female: true },
   it: { name: 'ITくん', role: '情報システム部', female: false },
   bucho: { name: '部長', role: '業務部門の部長', female: false },
+  neko: { name: 'メモ', role: 'レ点ノートのマスコットのネコ', female: false, mascot: true },
 };
 export const EXPRESSIONS = ['normal', 'smile', 'happy', 'surprised', 'worried', 'sweat', 'serious', 'thinking', 'shocked'];
 export const PROPS = ['chart_up', 'chart_down', 'document', 'laptop', 'memo', 'mail', 'phone', 'key', 'lock', 'ai_chat', 'red_tick'];
@@ -45,6 +46,7 @@ export function validateComic(c) {
       if (pos.has(ch.position)) errors.push(`${n}コマ目: 2人が同じ position です`);
       pos.add(ch.position);
       if (!EXPRESSIONS.includes(ch.expression)) errors.push(`${n}コマ目: expression「${ch.expression}」は ${EXPRESSIONS.join(', ')} のどれかです`);
+      if (ch.id === 'neko' && ch.prop) errors.push(`${n}コマ目: ネコ（neko）は小道具を持てません。prop は null にしてください`);
       if (ch.prop != null && ch.prop !== '' && !PROPS.includes(ch.prop)) errors.push(`${n}コマ目: prop「${ch.prop}」は ${PROPS.join(', ')} のどれかか null です`);
       if (ch.says != null && typeof ch.says !== 'string') errors.push(`${n}コマ目: says は文字列です`);
       if (ch.says && [...ch.says].length > MAX_SAYS) errors.push(`${n}コマ目: 台詞「${ch.says}」が${MAX_SAYS}字を超えています`);
@@ -175,6 +177,25 @@ function face(id, expr, x, hy) {
   return out;
 }
 
+// マスコットのネコ「メモ」。人より小さく、地面に座っている。dir は体の内側
+const CAT = '#9aa5ad';
+function cat(expr, x, base, dir) {
+  const hy = base - 46; // 頭の中心
+  const tail = `<path d="M${x - dir * 16} ${base - 6} Q${x - dir * 34} ${base - 10} ${x - dir * 30} ${base - 34}" fill="none" stroke="${CAT}" stroke-width="6" stroke-linecap="round"/>`;
+  const bodyEl = `<ellipse cx="${x}" cy="${base - 16}" rx="20" ry="16" fill="${CAT}"/>
+<ellipse cx="${x - 8}" cy="${base - 2}" rx="5" ry="3" fill="#b7c0c6"/><ellipse cx="${x + 8}" cy="${base - 2}" rx="5" ry="3" fill="#b7c0c6"/>`;
+  const ears = `<polygon points="${x - 15},${hy - 4} ${x - 13},${hy - 22} ${x - 3},${hy - 12}" fill="${CAT}"/><polygon points="${x + 15},${hy - 4} ${x + 13},${hy - 22} ${x + 3},${hy - 12}" fill="${CAT}"/>
+<polygon points="${x - 12},${hy - 8} ${x - 11.5},${hy - 17} ${x - 6},${hy - 12}" fill="#f2b8b0"/><polygon points="${x + 12},${hy - 8} ${x + 11.5},${hy - 17} ${x + 6},${hy - 12}" fill="#f2b8b0"/>`;
+  const headEl = `<ellipse cx="${x}" cy="${hy}" rx="17" ry="14" fill="${CAT}"/>`;
+  // 顔は人と同じ表情の描き方を縮小して使う
+  const f = `<g transform="translate(${x} ${hy - 2}) scale(0.55) translate(${-x} ${-hy})">${face('neko', expr, x, hy)}</g>`;
+  const nose = `<path d="M${x - 1.8} ${hy + 3} H${x + 1.8} L${x} ${hy + 5} Z" fill="#e08f86"/>`;
+  const whisk = [[-1, -1], [-1, 1], [1, -1], [1, 1]].map(([sx, sy]) =>
+    `<line x1="${x + sx * 7}" y1="${hy + 4 + sy * 1.5}" x2="${x + sx * 19}" y2="${hy + 3 + sy * 4}" stroke="#5b6770" stroke-width="1"/>`).join('');
+  return tail + bodyEl + ears + headEl + whisk + nose + f;
+}
+const headTop = (id, base) => (id === 'neko' ? base - 64 : base - 118);
+
 // 小道具（dir は体の内側＝相手のいる向き）
 function prop(name, x, base, dir) {
   if (!name) return '';
@@ -223,7 +244,7 @@ function prop(name, x, base, dir) {
   }
 }
 
-function bubble(text, speakerX, hy, region, width, by = 10) {
+function bubble(text, speakerX, tipY, region, width, by = 10) {
   const lines = wrap(text, width);
   const fs = 15, lh = 21, padX = 12, padY = 10;
   const maxLen = Math.max(...lines.map((l) => [...l].length));
@@ -236,7 +257,6 @@ function bubble(text, speakerX, hy, region, width, by = 10) {
   const r = 10;
   const tx = Math.max(bx + r + 10, Math.min(speakerX, bx + w - r - 10)); // しっぽの付け根
   const tipX = speakerX + (speakerX < 200 ? 4 : -4);
-  const tipY = hy - 36;
   const d = `M${bx + r} ${by} H${bx + w - r} Q${bx + w} ${by} ${bx + w} ${by + r} V${bottom - r} Q${bx + w} ${bottom} ${bx + w - r} ${bottom}`
     + ` H${tx + 7} L${tipX} ${tipY} L${tx - 7} ${bottom} H${bx + r} Q${bx} ${bottom} ${bx} ${bottom - r} V${by + r} Q${bx} ${by} ${bx + r} ${by} Z`;
   const t = lines.map((l, i) => `<text x="${bx + padX}" y="${by + padY + fs + i * lh - 2}" font-size="${fs}" fill="${INK}">${esc(l)}</text>`).join('');
@@ -262,16 +282,19 @@ export function renderComic(c) {
     for (const ch of p.characters) {
       const x = two ? (ch.position === 'left' ? 100 : 300) : (ch.position === 'left' ? 140 : 260);
       const dir = ch.position === 'left' ? 1 : -1;
-      g += body(ch.id, x, base, ch.prop) + head(ch.id, x, hy) + face(ch.id, ch.expression, x, hy) + prop(ch.prop, x, base, dir);
+      g += ch.id === 'neko'
+        ? cat(ch.expression, x, base, dir)
+        : body(ch.id, x, base, ch.prop) + head(ch.id, x, hy) + face(ch.id, ch.expression, x, hy) + prop(ch.prop, x, base, dir);
     }
     // 2人とも話すときは、先に話す人（characters の先頭）のふきだしを上にずらして読む順を示す
     let order = 0;
     for (const ch of p.characters) {
       if (!ch.says) continue;
-      const by = both ? (order++ === 0 ? 6 : 32) : 10;
+      // ネコは背が低いので、1人だけ話すときはふきだしを下げてしっぽを短くする
+      const by = both ? (order++ === 0 ? 6 : 32) : (ch.id === 'neko' ? 50 : 10);
       const x = two ? (ch.position === 'left' ? 100 : 300) : (ch.position === 'left' ? 140 : 260);
       const region = both ? (ch.position === 'left' ? [8, 196] : [204, 392]) : [8, 392];
-      g += bubble(ch.says, x, hy, region, both ? LINE_NARROW : LINE_WIDE, by);
+      g += bubble(ch.says, x, headTop(ch.id, base), region, both ? LINE_NARROW : LINE_WIDE, by);
     }
     return `<g transform="translate(${M} ${oy})">${g}</g>`;
   }).join('\n');
