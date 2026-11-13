@@ -113,6 +113,7 @@ function layout({ title, description, path: pagePath, body, type = 'website', ex
 <meta name="twitter:card" content="summary">
 <link rel="alternate" type="application/rss+xml" title="${esc(config.title)}" href="${url('/feed.xml')}">
 <link rel="icon" href="${url('/favicon.svg')}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="${url('/apple-touch-icon.png')}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -124,7 +125,7 @@ ${extraHead}${ads}${ga}
 <header class="masthead">
   <div class="wrap masthead-inner">
     <a class="brand" href="${url('/')}">
-      <svg class="brand-tick" viewBox="0 0 40 32" aria-hidden="true"><path d="M3 15 L14 27 L37 3"/></svg>
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="14" fill="#1d2a36"/><rect x="17" y="11" width="35" height="43" rx="4" fill="#f3f6f2"/><circle cx="17" cy="19" r="3.2" fill="#1d2a36" stroke="#9fb5a6" stroke-width="1.6"/><circle cx="17" cy="29" r="3.2" fill="#1d2a36" stroke="#9fb5a6" stroke-width="1.6"/><circle cx="17" cy="39" r="3.2" fill="#1d2a36" stroke="#9fb5a6" stroke-width="1.6"/><circle cx="17" cy="48" r="3.2" fill="#1d2a36" stroke="#9fb5a6" stroke-width="1.6"/><line x1="25" y1="20" x2="45" y2="20" stroke="#cfdcd2" stroke-width="2"/><path class="brand-mark-tick" d="M24 34 L31 42 L46 25"/></svg>
       <span class="brand-name">${esc(config.title)}</span>
     </a>
     <p class="brand-tagline">${esc(config.tagline)}</p>
