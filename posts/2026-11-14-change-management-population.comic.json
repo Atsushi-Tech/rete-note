@@ -1,0 +1,77 @@
+{
+  "title": "母集団はどこから？",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": "document",
+          "says": "申請一覧は\n全件そろってます!"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": null,
+          "says": "一覧に載らない\n変更は、どう\n見つけるの?"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "sweat",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "right",
+          "expression": "serious",
+          "prop": "laptop",
+          "says": "本番の履歴から\n母集団を作ろう"
+        },
+        {
+          "id": "neko",
+          "position": "left",
+          "expression": "smile",
+          "prop": null,
+          "says": "抜け漏れが\n見えるにゃ"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "happy",
+          "prop": "red_tick",
+          "says": "母集団は本番\nの履歴から!"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "happy",
+          "prop": null,
+          "says": "起点が大事にゃ"
+        }
+      ]
+    }
+  ]
+}
