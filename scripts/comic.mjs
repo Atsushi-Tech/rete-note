@@ -275,7 +275,7 @@ export function renderComic(c) {
     }
     return `<g transform="translate(${M} ${oy})">${g}</g>`;
   }).join('\n');
-  return `<svg class="comic-svg" viewBox="0 0 ${PW + M * 2} ${H}" role="img" aria-labelledby="comic-t comic-d" xmlns="http://www.w3.org/2000/svg" font-family="BIZ UDPGothic, Hiragino Sans, Yu Gothic, Meiryo, sans-serif">
+  return `<svg class="comic-svg" viewBox="0 0 ${PW + M * 2} ${H}" role="img" aria-labelledby="comic-t comic-d" xmlns="http://www.w3.org/2000/svg" font-family="'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif">
 <title id="comic-t">4コマ漫画「${esc(c.title)}」</title>
 <desc id="comic-d">${esc(transcript)}</desc>
 ${panels}
