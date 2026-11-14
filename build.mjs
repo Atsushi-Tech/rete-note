@@ -95,6 +95,9 @@ function layout({ title, description, path: pagePath, body, type = 'website', ex
     ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${esc(config.googleAnalyticsId)}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${esc(config.googleAnalyticsId)}');</script>`
     : '';
+  const verify = config.googleSiteVerification
+    ? `<meta name="google-site-verification" content="${esc(config.googleSiteVerification)}">`
+    : '';
   const nav = config.categories.map((c) =>
     `<a href="${url(`/category/${c.slug}/`)}"${pagePath.startsWith(`/category/${c.slug}/`) ? ' aria-current="page"' : ''}>${esc(c.name)}</a>`).join('');
   return `<!doctype html>
@@ -102,6 +105,7 @@ function layout({ title, description, path: pagePath, body, type = 'website', ex
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+${verify}
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description || config.description)}">
 <link rel="canonical" href="${absUrl(pagePath)}">

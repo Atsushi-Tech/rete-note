@@ -107,6 +107,7 @@ npm run draft -- --mock   # APIを使わずに自動生成の流れを試す（�
 3. 記事内広告のユニットを作ったら、そのスロットIDを `adsense.slotInArticle` に入れる → 本文の2つ目の見出しの前と記事末尾に表示される
 
 アクセス解析は `googleAnalyticsId`（`G-...`）を入れると有効になります。
+Google Search Console の所有権確認は、HTMLタグの `content` の値を `googleSiteVerification` に入れると全ページの `<head>` に出力されます。サイトマップは `https://atsushi-tech.github.io/rete-note/sitemap.xml` です。
 
 ## 注意
 
