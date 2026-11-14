@@ -1,0 +1,77 @@
+{
+  "title": "去年と同じ計画？",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "smile",
+          "prop": null,
+          "says": "去年と同じ\n計画でいいよね"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": "document",
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "serious",
+          "prop": null,
+          "says": "新システムや\n組織変更は？"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "sweat",
+          "prop": null,
+          "says": "クラウド移行\n始めました…"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "normal",
+          "prop": null,
+          "says": "まず全体の\n一覧にゃ"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "document",
+          "says": "監査ユニバース\nを作ります"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "happy",
+          "prop": "red_tick",
+          "says": "リスクで選び\n根拠を残す"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "smile",
+          "prop": null,
+          "says": "コピペは\n卒業にゃ"
+        }
+      ]
+    }
+  ]
+}
