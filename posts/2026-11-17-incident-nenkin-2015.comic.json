@@ -1,0 +1,70 @@
+{
+  "title": "他山の石を探せ",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": "document",
+          "says": "年金機構の\n報告書を読もう"
+        },
+        {
+          "id": "moriya",
+          "position": "right",
+          "expression": "normal",
+          "prop": null,
+          "says": "うちの重要データは\nどこにある？"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "it",
+          "position": "left",
+          "expression": "sweat",
+          "prop": "laptop",
+          "says": "共有フォルダに\nコピーが…"
+        },
+        {
+          "id": "moriya",
+          "position": "right",
+          "expression": "serious",
+          "prop": "memo",
+          "says": "一覧にして\n確認しましょう"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "bucho",
+          "position": "left",
+          "expression": "smile",
+          "prop": null,
+          "says": "ブロックしたから\n大丈夫だろう"
+        },
+        {
+          "id": "reten",
+          "position": "right",
+          "expression": "serious",
+          "prop": null,
+          "says": "同じ手口が続くなら\n本格攻撃を疑います"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "happy",
+          "prop": "red_tick",
+          "says": "データの所在・\n初動の判断・\n報告ルートを確認"
+        }
+      ]
+    }
+  ]
+}
