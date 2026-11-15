@@ -1,0 +1,77 @@
+{
+  "title": "そのAI、承認済み？",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "worried",
+          "prop": null,
+          "says": ""
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": "ai_chat",
+          "says": "議事録を生成AIに\n貼ったら一瞬でした！"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "serious",
+          "prop": null,
+          "says": "それ、承認済みの\nツールですか？"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "sweat",
+          "prop": null,
+          "says": "えっ、無料のを\n使ってました…"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": "memo",
+          "says": "規程があっても\n実態を見ないとね"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "normal",
+          "prop": null,
+          "says": "入力禁止の例も\n要るにゃ"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "red_tick",
+          "says": "規程・ツール・入力\nルールが実際に回って\nいるかを確かめます"
+        },
+        {
+          "id": "moriya",
+          "position": "right",
+          "expression": "smile",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    }
+  ]
+}
