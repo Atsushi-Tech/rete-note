@@ -4,13 +4,14 @@
   --rule: #cfdcd2;         /* 罫線 */
   --rule-strong: #9fb5a6;
   --ink: #1d2a36;          /* 紺インク */
-  --ink-soft: #52616b;
+  --ink-soft: #43515a;
   --red: #c3352b;          /* 監査用の赤鉛筆 */
   --white: #fbfcfa;
   /* 見出し・ブログ名は M PLUS Rounded 1c（丸ゴシック）。
-     本文と小さい文字（日付・タグ・台帳など）は、小さくても崩れにくい UD フォントの BIZ UDPGothic */
+     本文と小さい文字（日付・タグ・台帳など）は Webフォントを使わず、端末に入っている標準の角ゴシック
+     （iPhone/Mac: ヒラギノ角ゴ、Android: Noto Sans CJK、Windows: メイリオ/Yu Gothic UI）。小さくても歪まない */
   --heading: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
-  --gothic: "BIZ UDPGothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  --gothic: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans CJK JP", "Meiryo", "Yu Gothic UI", sans-serif;
   --measure: 40em;
 }
 
@@ -115,7 +116,7 @@ a:hover { color: var(--red); }
 }
 .entry-title:hover { text-decoration: underline; }
 .entry-desc { margin: .45rem 0 .5rem; color: var(--ink-soft); font-size: .92rem; max-width: var(--measure); line-height: 1.75; }
-.entry-meta { margin: 0; font-size: .8rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; }
+.entry-meta { margin: 0; font-size: .85rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; }
 .entry-mark { width: 2.2rem; height: 2rem; border: 1px dashed var(--rule-strong); border-radius: 50%; display: grid; place-items: center; opacity: .55; }
 .entry-mark .tick { width: 1.5rem; visibility: hidden; }
 .entry.is-read .entry-mark { border-color: transparent; opacity: 1; }
@@ -161,13 +162,13 @@ a:hover { color: var(--red); }
 
 .prose .comic { margin: 2.2em 0 0; max-width: 420px; }
 .prose .comic-svg { display: block; width: 100%; height: auto; }
-.prose .comic figcaption { font-size: .8rem; color: var(--ink-soft); margin-top: .4rem; }
+.prose .comic figcaption { font-size: .85rem; color: var(--ink-soft); margin-top: .4rem; }
 
-.tags { list-style: none; padding: 0; margin: 3rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem; font-size: .82rem; }
+.tags { list-style: none; padding: 0; margin: 3rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem; font-size: .86rem; }
 .tags li { border: 1px solid var(--rule-strong); padding: .15rem .65rem; border-radius: 3px; background: var(--white); }
 
 .ad { margin: 2.5rem 0; }
-.ad-label { font-size: .75rem; color: var(--ink-soft); margin: 0 0 .3rem; }
+.ad-label { font-size: .86rem; color: var(--ink-soft); margin: 0 0 .3rem; }
 
 .related { margin-top: 4rem; }
 .related .entry { grid-template-columns: 4.5rem 1fr 2.5rem; }
@@ -175,7 +176,7 @@ a:hover { color: var(--red); }
 
 .postnav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 3rem; }
 .postnav a { display: block; text-decoration: none; padding: 1rem; border: 1px solid var(--rule-strong); background: var(--white); font-family: var(--heading); font-weight: 700; line-height: 1.5; border-radius: 3px; }
-.postnav a span { display: block; font-family: var(--gothic); font-weight: 400; font-size: .78rem; color: var(--ink-soft); margin-bottom: .3rem; }
+.postnav a span { display: block; font-family: var(--gothic); font-weight: 400; font-size: .84rem; color: var(--ink-soft); margin-bottom: .3rem; }
 .postnav a:hover { border-color: var(--ink); }
 .postnav .next { text-align: right; }
 
@@ -186,7 +187,7 @@ a:hover { color: var(--red); }
 .foot-links { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin: 1.25rem 0; }
 .foot-links a { color: var(--white); }
 .foot-links a:hover { color: #f2a59e; }
-.copy { color: #8c9aa3; font-size: .8rem; }
+.copy { color: #8c9aa3; font-size: .85rem; }
 
 /* ---------- 小さい画面 ---------- */
 @media (max-width: 640px) {
@@ -195,7 +196,7 @@ a:hover { color: var(--red); }
   .catnav { overflow-x: auto; flex-wrap: nowrap; }
   .catnav a { white-space: nowrap; padding: .5rem .8rem; }
   .entry, .related .entry { grid-template-columns: 1fr 2.2rem; gap: .4rem .8rem; }
-  .entry-ref { grid-column: 1 / -1; border-right: none; padding: 0; font-size: .78rem; }
+  .entry-ref { grid-column: 1 / -1; border-right: none; padding: 0; font-size: .84rem; }
   .entry-mark { grid-row: 2; grid-column: 2; }
   .entry-title { font-size: 1.12rem; }
   .prose { font-size: 1rem; }
