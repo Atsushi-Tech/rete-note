@@ -7,9 +7,10 @@
   --ink-soft: #52616b;
   --red: #c3352b;          /* 監査用の赤鉛筆 */
   --white: #fbfcfa;
-  /* 見出しも本文も M PLUS Rounded 1c（丸ゴシック）。太さで見出しと本文を区別する */
+  /* 見出し・ブログ名は M PLUS Rounded 1c（丸ゴシック）。
+     本文と小さい文字（日付・タグ・台帳など）は、小さくても崩れにくい UD フォントの BIZ UDPGothic */
   --heading: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
-  --gothic: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  --gothic: "BIZ UDPGothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
   --measure: 40em;
 }
 
