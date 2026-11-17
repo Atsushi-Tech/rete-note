@@ -1,0 +1,77 @@
+{
+  "title": "戻せてこそバックアップ",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": "chart_up",
+          "says": "毎晩ジョブは\n全部成功です！"
+        },
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "smile",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": null,
+          "says": "復元テストは\nしましたか？"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "sweat",
+          "prop": null,
+          "says": "あ…それは\nまだです…"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "serious",
+          "prop": "memo",
+          "says": "試したら2日。\n目標は半日です"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "shocked",
+          "prop": null,
+          "says": "手順書も\n暗号化側に…"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "red_tick",
+          "says": "取得より復元を\n確認します"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "happy",
+          "prop": null,
+          "says": "戻せてこそにゃ"
+        }
+      ]
+    }
+  ]
+}
