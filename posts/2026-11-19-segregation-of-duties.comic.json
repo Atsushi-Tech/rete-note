@@ -1,0 +1,70 @@
+{
+  "title": "一人で完結しない仕組み",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": null,
+          "says": "自分で直して\n本番に入れました"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": "document",
+          "says": "承認は\nどなたが？"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "smile",
+          "prop": null,
+          "says": "信頼してるから\n問題ないよ"
+        },
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "serious",
+          "prop": "memo",
+          "says": "信頼と統制は\n別なんです"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "surprised",
+          "prop": null,
+          "says": "全部一人で\nできちゃうにゃ"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "worried",
+          "prop": "laptop",
+          "says": "申請も承認も\n同じIDね"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "red_tick",
+          "says": "一人で完結できない\n状態かどうかを\n確かめます"
+        }
+      ]
+    }
+  ]
+}
