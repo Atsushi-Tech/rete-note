@@ -1,0 +1,70 @@
+{
+  "title": "AIに丸投げ？",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "smile",
+          "prop": "ai_chat",
+          "says": "AIに監査計画を\n作らせれば楽だな"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "worried",
+          "prop": null,
+          "says": "ええと…\n丸ごとですか？"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": "memo",
+          "says": "候補出しは\n助かりますね"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "normal",
+          "prop": null,
+          "says": "誤りも混ざる\nにゃ"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "sweat",
+          "prop": "ai_chat",
+          "says": "AIが挙げた\n根拠、見つかりません"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "serious",
+          "prop": "document",
+          "says": "一次資料で\n確認しましょう"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "red_tick",
+          "says": "下準備はAIに。\n評価と判断は\n監査人が持ちます"
+        }
+      ]
+    }
+  ]
+}
