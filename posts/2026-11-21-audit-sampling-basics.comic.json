@@ -1,0 +1,77 @@
+{
+  "title": "サンプルは根拠で決める",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": "document",
+          "says": "日次の統制、\n全件見ます！"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": null,
+          "says": "母集団は\n何件ですか？"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "sweat",
+          "prop": null,
+          "says": "えっと…\n250件ほど？"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "normal",
+          "prop": null,
+          "says": "なんとなく\n10件でいいよ"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "serious",
+          "prop": "memo",
+          "says": "頻度とリスクで\n決めます"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "red_tick",
+          "says": "件数より根拠を\n残しましょう"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "happy",
+          "prop": null,
+          "says": "母集団が先にゃ"
+        }
+      ]
+    }
+  ]
+}
