@@ -1,0 +1,70 @@
+{
+  "title": "入口は誰が見る？",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": "document",
+          "says": "ある病院の\n報告書を読んだ"
+        },
+        {
+          "id": "moriya",
+          "position": "right",
+          "expression": "surprised",
+          "prop": null,
+          "says": "VPN機器から\n侵入されたとか"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "sweat",
+          "prop": null,
+          "says": "更新の通知は\n届いてません"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "serious",
+          "prop": null,
+          "says": "届く先は\n決まってる？"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "neko",
+          "position": "left",
+          "expression": "worried",
+          "prop": null,
+          "says": "例外のまま\n放置は危険にゃ"
+        },
+        {
+          "id": "moriya",
+          "position": "right",
+          "expression": "thinking",
+          "prop": "memo",
+          "says": "承認と期限を\n台帳に残そう"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "red_tick",
+          "says": "入口を棚卸して\n担当者を決める。\nまずそこから！"
+        }
+      ]
+    }
+  ]
+}
