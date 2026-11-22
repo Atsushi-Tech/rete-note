@@ -1,0 +1,77 @@
+{
+  "title": "クラウドは誰の責任？",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "worried",
+          "prop": null,
+          "says": ""
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": "laptop",
+          "says": "クラウドにしたから\n安全だよね？\n業者が守るでしょ？"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": null,
+          "says": "どこまでが\n業者の責任？"
+        },
+        {
+          "id": "moriya",
+          "position": "right",
+          "expression": "serious",
+          "prop": "memo",
+          "says": "設定とデータは\nうちの責任です"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "serious",
+          "prop": "document",
+          "says": "報告書は\n業者分だけ"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "normal",
+          "prop": null,
+          "says": "自社の宿題\nもあるにゃ"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "red_tick",
+          "says": "委託しても\n責任は残る。\n自社の範囲を確認"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "sweat",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    }
+  ]
+}
