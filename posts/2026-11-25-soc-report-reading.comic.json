@@ -1,0 +1,63 @@
+{
+  "title": "報告書は読んで終わり？",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "right",
+          "expression": "happy",
+          "prop": "document",
+          "says": "委託先のSOC2報告書\nもらいました！\nこれで安心ですね"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": "document",
+          "says": "例外欄は\n読みましたか？"
+        },
+        {
+          "id": "moriya",
+          "position": "right",
+          "expression": "sweat",
+          "prop": null,
+          "says": "えっ…\n表紙だけです"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "serious",
+          "prop": null,
+          "says": "自社の宿題\nCUECもにゃ"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "serious",
+          "prop": "memo",
+          "says": "利用企業側の\n統制が必要よ"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "red_tick",
+          "says": "意見、例外、CUEC。\n3点を読んで\n自社の統制に結ぶわ"
+        }
+      ]
+    }
+  ]
+}
