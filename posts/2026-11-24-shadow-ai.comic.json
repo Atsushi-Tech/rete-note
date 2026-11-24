@@ -1,0 +1,77 @@
+{
+  "title": "見えないAIを探せ",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": "ai_chat",
+          "says": "個人のAIで\n議事録を要約！"
+        },
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "surprised",
+          "prop": null,
+          "says": "えっ、会社の\n情報ですよね？"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": "laptop",
+          "says": "ログに見慣れない\nAIサイトが…"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "worried",
+          "prop": null,
+          "says": "意外と\n多いにゃ"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "bucho",
+          "position": "right",
+          "expression": "smile",
+          "prop": null,
+          "says": "全部禁止にすれば\n解決だな！"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "serious",
+          "prop": null,
+          "says": "隠れて使われ\n見えなくなります"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "red_tick",
+          "says": "禁止より\n見える化と受け皿"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "happy",
+          "prop": null,
+          "says": "まず棚卸しにゃ"
+        }
+      ]
+    }
+  ]
+}
