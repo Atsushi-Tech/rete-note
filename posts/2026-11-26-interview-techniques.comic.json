@@ -1,0 +1,77 @@
+{
+  "title": "聞き方と記録",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "worried",
+          "prop": "memo",
+          "says": "ヒアリングで全部\n「はい」でした。\nこれで安心ですよね？"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": null,
+          "says": "まずは広く\n聞きましょう"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "serious",
+          "prop": null,
+          "says": "誘導は\nNGにゃ"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "serious",
+          "prop": "document",
+          "says": "事実と所見は\n分けてね"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "surprised",
+          "prop": "memo",
+          "says": "混ぜて\n書いてました…"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "happy",
+          "prop": "red_tick",
+          "says": "広く聞いて\n証跡で確認"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "smile",
+          "prop": null,
+          "says": "記録は\n当日中にゃ"
+        }
+      ]
+    }
+  ]
+}
