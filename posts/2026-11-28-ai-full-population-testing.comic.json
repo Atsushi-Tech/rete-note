@@ -1,0 +1,70 @@
+{
+  "title": "全件チェックの落とし穴",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": "ai_chat",
+          "says": "AIに全件\n見せたら異常なし！"
+        },
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": null,
+          "says": "どんな条件で\n探したの？"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "serious",
+          "prop": "document",
+          "says": "元データが\n全件か確認を"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "sweat",
+          "prop": null,
+          "says": "あ、先月分が\n抜けてました"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "memo",
+          "says": "限度額の直下や\n休日入力も見るの"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "normal",
+          "prop": null,
+          "says": "AIの答えは\n裏を取るにゃ"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "happy",
+          "prop": "red_tick",
+          "says": "全件分析は入口。\n条件と元データを\n説明できて合格ね"
+        }
+      ]
+    }
+  ]
+}
