@@ -1,0 +1,77 @@
+{
+  "title": "閉域網なら安心？",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": null,
+          "says": ""
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": "laptop",
+          "says": "うちは閉域網\nだから安全です！"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "serious",
+          "prop": "memo",
+          "says": "VPN機器の更新\n誰の担当？"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "sweat",
+          "prop": null,
+          "says": "えっと…\n書いてないです"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": "document",
+          "says": "権限一覧も\n見せてください"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "worried",
+          "prop": null,
+          "says": "鍵が全部\n同じにゃ…"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "red_tick",
+          "says": "委託先の入口と\n社内の権限を\n台帳と実機で確認"
+        },
+        {
+          "id": "moriya",
+          "position": "right",
+          "expression": "smile",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    }
+  ]
+}
