@@ -1,0 +1,77 @@
+{
+  "title": "ログは見てますか？",
+  "panels": [
+    {
+      "characters": [
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "happy",
+          "prop": "laptop",
+          "says": "ログは大量に\n取ってます！"
+        },
+        {
+          "id": "moriya",
+          "position": "left",
+          "expression": "worried",
+          "prop": null,
+          "says": "見ている人は\nいますか？"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "thinking",
+          "prop": null,
+          "says": "ログを消せる\n人は誰かな？"
+        },
+        {
+          "id": "it",
+          "position": "right",
+          "expression": "shocked",
+          "prop": null,
+          "says": "管理者なら\n消せます…"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "serious",
+          "prop": "memo",
+          "says": "取る・残す・\n守る・見る"
+        },
+        {
+          "id": "neko",
+          "position": "right",
+          "expression": "normal",
+          "prop": null,
+          "says": "最後が抜けがち\nにゃ"
+        }
+      ]
+    },
+    {
+      "characters": [
+        {
+          "id": "reten",
+          "position": "left",
+          "expression": "smile",
+          "prop": "red_tick",
+          "says": "ログは取るだけでは\n不十分です。\n4段階で確認！"
+        },
+        {
+          "id": "moriya",
+          "position": "right",
+          "expression": "happy",
+          "prop": null,
+          "says": ""
+        }
+      ]
+    }
+  ]
+}
